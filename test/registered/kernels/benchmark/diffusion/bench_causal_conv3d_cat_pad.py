@@ -17,7 +17,9 @@ register_cuda_ci(
     runner_config="1-gpu-large",
     disabled="standalone benchmark",
 )
-register_amd_ci(est_time=20, stage="jit-kernel-benchmark", runner_config="amd")
+register_amd_ci(
+    est_time=20, stage="base-b-kernel-benchmark", runner_config="1-gpu-small-amd"
+)
 
 DEVICE = "cuda"
 DTYPE = torch.bfloat16

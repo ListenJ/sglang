@@ -26,7 +26,9 @@ from sglang.kernels.ops.attention.dsa.triton_sparse_mla_decode import (
 from sglang.srt.utils import is_hip
 from sglang.test.ci.ci_register import register_amd_ci
 
-register_amd_ci(est_time=20, stage="jit-kernel-unit", runner_config="amd")
+register_amd_ci(
+    est_time=20, stage="base-b-kernel-unit", runner_config="1-gpu-small-amd"
+)
 pytestmark = pytest.mark.skipif(not is_hip(), reason="ROCm only")
 
 _IS_GFX950 = is_hip() and _is_gfx950_sparse_mla_fp8(

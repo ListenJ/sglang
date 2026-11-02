@@ -41,10 +41,7 @@ register_cuda_ci(
     stage="nightly",
     runner_config="1-gpu-large",
 )
-register_amd_ci(
-    est_time=380,
-    suite="stage-b-test-1-gpu-large-amd",
-)
+register_amd_ci(est_time=380, stage="base-b", runner_config="1-gpu-large-amd")
 
 PROMPTS = [
     "SGL is a",
