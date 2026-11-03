@@ -383,6 +383,7 @@ POSITIONAL_FIELD_ORDER = (
     "mm_preprocess_cache_size_mb",
     "trust_mm_content_hashes",
     "token_space_preprocess_cache_trust_url",
+    "enable_token_space_preprocess_cache",
     "limit_mm_data_per_request",
     "enable_mm_global_cache",
     "image_processor_backend",
